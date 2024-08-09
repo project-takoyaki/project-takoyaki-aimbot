@@ -1,6 +1,9 @@
 [submodule "dependencies/submodules/polyhook-2-0"]
 	path = dependencies/submodules/polyhook-2-0
 	url = https://github.com/project-takoyaki/polyhook-2-0.git
+[submodule "project-takoyaki-arduino/packages/ArduinoCore-API"]
+	path = project-takoyaki-arduino/packages/ArduinoCore-API
+	url = https://github.com/arduino/ArduinoCore-API.git
 [submodule "project-takoyaki-arduino/packages/framework-arduinorenesas-uno"]
 	path = project-takoyaki-arduino/packages/framework-arduinorenesas-uno
 	url = https://github.com/project-takoyaki/framework-arduinorenesas-uno.git
