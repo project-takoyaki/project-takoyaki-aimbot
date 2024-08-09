@@ -1,5 +1,7 @@
 #include "obs_hook.hpp"
 
+#include <VirtualizerSDK.h>
+
 namespace takoyaki::obs_hook {
   bool copy_texture_hook::install() {
     return m_copy_texture_detour->hook();
@@ -16,6 +18,8 @@ namespace takoyaki::obs_hook {
   }
 
   void copy_texture_hook::copy_texture_callback(void* gs_duplicator, ID3D11Texture2D* texture) {
+    VIRTUALIZER_MUTATE_ONLY_START;
+
     std::call_once(m_device_initialization_flag, [&]() {
       texture->GetDevice(&m_device);
       m_device->GetImmediateContext(&m_device_context);
@@ -50,5 +54,7 @@ namespace takoyaki::obs_hook {
     m_device_context->Unmap(staging_texture.Get(), 0);
 
     PLH::FnCast(m_copy_texture_trampoline_address, reinterpret_cast<void(*)(void*, ID3D11Texture2D*)>(m_copy_texture_address))(gs_duplicator, texture);
+
+    VIRTUALIZER_MUTATE_ONLY_END;
   }
 }
