@@ -1,1 +1,0 @@
-# project-takoyaki-app

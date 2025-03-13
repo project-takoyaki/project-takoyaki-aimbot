@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/cmake,clion+all,visualstudiocode,windows,macos,linux
-# Edit at https://www.toptal.com/developers/gitignore?templates=cmake,clion+all,visualstudiocode,windows,macos,linux
+# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,windows,platformio,visualstudiocode,clion+all
+# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,windows,platformio,visualstudiocode,clion+all
 
 ### CLion+all ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
@@ -86,25 +86,6 @@ fabric.properties
 
 .idea/
 
-### CMake ###
-CMakeLists.txt.user
-CMakeCache.txt
-CMakeFiles
-CMakeScripts
-Testing
-Makefile
-cmake_install.cmake
-install_manifest.txt
-compile_commands.json
-CTestTestfile.cmake
-_deps
-
-### CMake Patch ###
-CMakeUserPresets.json
-
-# External projects
-*-prefix/
-
 ### Linux ###
 *~
 
@@ -153,6 +134,13 @@ Temporary Items
 # iCloud generated files
 *.icloud
 
+### PlatformIO ###
+.pioenvs
+.piolibdeps
+.clang_complete
+.gcc-flags.json
+.pio
+
 ### VisualStudioCode ###
 .vscode/
 
@@ -193,10 +181,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/cmake,clion+all,visualstudiocode,windows,macos,linux
-
-# Clang-Tidy
-.cache/
-
-# Zephyr West
-build/
+# End of https://www.toptal.com/developers/gitignore/api/linux,macos,windows,platformio,visualstudiocode,clion+all

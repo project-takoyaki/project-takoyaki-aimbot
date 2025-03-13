@@ -1,0 +1,6 @@
+[submodule "project-takoyaki-firmware/packages/framework-arduinoteensy"]
+	path = project-takoyaki-firmware/packages/framework-arduinoteensy
+	url = https://github.com/project-takoyaki/framework-arduinoteensy.git
+[submodule "project-takoyaki-firmware/lib/USBHost_t36"]
+	path = project-takoyaki-firmware/lib/USBHost_t36
+	url = https://github.com/project-takoyaki/USBHost_t36.git
